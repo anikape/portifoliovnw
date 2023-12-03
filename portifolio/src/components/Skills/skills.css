@@ -1,0 +1,124 @@
+.skills {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 1288px;
+  height: 1222px;
+  border-radius: 97px;
+  background: linear-gradient(96deg, #130428 0.58%, #251043 16.32%, #38126D 29.33%, #261045 45.66%, #190634 54.44%);
+  box-shadow: 4px 7px 26px 0px rgba(0, 0, 0, 0.12);
+  margin: 8rem auto;
+}
+
+.colchetes {
+  color: #FFF;
+
+}
+
+.skills h1 {
+  color: #FF0;
+  font-family: Poppins;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32.5px;
+  text-align: center;
+  /* padding-top:4em; */
+}
+
+.skillsContent {
+  display: flex;
+  justify-content: center;
+  margin: 5rem auto;
+  width: 1105px;
+}
+
+.skillsContent li {
+  color: #9747FF;
+  font-family: 'Preahvihear', sans-serif;
+  font-size: 23px;
+  padding-bottom: 0.5rem;
+}
+
+.skillsContent span {
+  color: #FFFFFF;
+  font-family: 'Preahvihear', sans-serif;
+  font-size: 23px;
+}
+
+.dataIcons{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+
+
+.icons img {
+  width: 99px;
+  height: 99px;
+  margin: 10px;
+}
+
+
+@media screen and (max-width: 480px) {
+  .skills {
+    max-width: 90%;
+    margin: 1rem auto;
+    padding: 0 10px;
+  }
+
+  .skills h1 {
+    font-size: 24px;
+    line-height: 1.2;
+    padding-bottom: 1em;
+    padding-top: 0.5em;
+  }
+
+  .skillsContent {
+    margin: 0;
+    width: 100%;
+  }
+
+  .skillsContent ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .skillsContent li {
+    font-size: 14px;
+    margin-bottom: 1em;
+  }
+
+  .skillsContent span {
+    font-size: 1em;
+    text-align: left;
+    display: block;
+  }
+
+  .dataIcons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-items: center;
+  }
+
+  .icons {
+    display: initial;
+    justify-content: initial;
+    padding: 0;
+    margin: 0;
+  }
+
+  .icons img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+}

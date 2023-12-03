@@ -37,6 +37,11 @@
   font-size: 33px;
 }
 
+.footer{
+  display: flex;
+  width: 100%;
+}
+
 @media screen and (max-width:480px) {
   .profile{
     flex-direction: column;

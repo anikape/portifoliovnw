@@ -3,6 +3,9 @@ import Navbar from '../Navbar/Navbar'
 import me from '../../assets/me.png'
 import lovely from '../../assets/lovely.png'
 import './home.css'
+import Main from '../Main/Main'
+import Skills from '../Skills/Skills'
+import Footer from '../Footer/Footer'
 
 const Home = () => {
   return (
@@ -14,17 +17,24 @@ const Home = () => {
         <img className='me' src={me} alt="Avatar Ana Santos" width="410" height="394" />
       </div>
 
-      <div className='profileContent'>
-        <p>
-          Olá! Sou <span> Ana Santos</span>.
-        </p>
-        <p>Esse é meu <span><img className='lovely'  src={lovely} width={94}
-height={94} alt='Imagem de um coração amarelo' /></span> portifólio</p>
+        <div className='profileContent'>
+          <p>
+            Olá! Sou <span> Ana Santos</span>.
+          </p>
+          <p>Esse é meu <span><img className='lovely'  src={lovely} width={94}
+          height={94} alt='Imagem de um coração amarelo' /></span> portifólio</p>
 
-      </div>
+        </div>
      
 
       </section>
+
+      <Main />
+      <Skills />
+      <div className='footer'>
+      <Footer />
+      </div>
+     
     </div>
   )
 }

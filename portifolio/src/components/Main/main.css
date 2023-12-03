@@ -1,0 +1,128 @@
+.aboutMe {
+  background-image: url("../../assets/bgAuboutMe.png");
+  width: 965px;
+  height: 841px;
+  margin: 5em auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.colors2{
+  display: none;
+}
+
+.blue {
+  color: #61DAFB;
+
+}
+
+.highlight {
+  color: #FF0;
+ 
+}
+
+.menuColors {
+  width: 965px;
+  height: 841px;
+  padding-top: 32px;
+  padding-left: 42px;
+}
+
+hr {
+  margin: 3rem 3rem;
+}
+
+.aboutMeContent {
+  margin-top: 2rem;
+}
+
+.aboutMeContent h1 {
+  color: #FFF;
+  font-family: 'Preahvihear', sans-serif;
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 126.664%;
+  letter-spacing: 0.9px;
+}
+
+.aboutMeContent p {
+  width: 900px;
+  color: #FFF;
+  font-family: 'Preahvihear', sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 126.664%;
+  letter-spacing: 0.5px;
+  padding-top: 2rem;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image1 {
+  width: 343px;
+  height: 212px;
+  padding-top: 2em;
+}
+
+.image2 {
+  width: 406px;
+  height: 296px;
+}
+
+
+@media screen and (max-width:480px){
+  .aboutMe{
+    background: url('../../assets/bgMobile.png');
+    flex-direction: column;
+    width: 100%;
+    height: 1450px;
+    align-items: center;
+    
+  }
+  
+
+  .aboutMeContent{
+    align-items: center;
+    justify-content: center;
+    width:347px;
+  
+  }
+
+  .aboutMeContent h1{
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .aboutMeContent p{
+    font-size:18px;
+    width: 300px;
+  }
+
+  .menuColors{
+    width: 367px;
+    
+  }
+  
+
+  .images{
+    flex-direction: column;
+    margin-top: -15rem;
+  }
+
+  .image1{
+    width: 343px;
+    height: 212px;
+  }
+
+  .image2{
+    width: 406px;
+    height: 296px;
+  }
+
+}
