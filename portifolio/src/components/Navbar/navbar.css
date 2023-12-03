@@ -1,0 +1,12 @@
+#navbarNav{
+
+}
+
+.nav-link{
+  color: rgba(255, 255, 255, 0.90) !important;
+  font-size: 23px !important;
+}
+
+.nav-link:hover{
+  color:#FF0 !important;
+}
