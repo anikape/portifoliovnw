@@ -1,4 +1,5 @@
 .footer {
+  background: #11071F  !important;
   display: flex;
   flex-direction: column;
   height: 100px;
@@ -50,6 +51,7 @@
 }
 
 #copyright {
+  background: #11071F !important;
   display: flex;
   color: #CCC;
   width: 100%;

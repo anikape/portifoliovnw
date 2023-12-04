@@ -4,7 +4,7 @@ import './footer.css'
 
 const Footer = () => {
   return (
-    <section className='footer'>
+    <section id='footer'>
       <section className="contact">
         <a href="https://wa.me/5581988693599" target="_blank" rel="noopener noreferrer">
           <FaWhatsapp className="fa-2x" />
@@ -33,7 +33,7 @@ const Footer = () => {
 
         <div id="copyright">
         <h3>Ana Santos &copy;2023 - All rights reserved. </h3>
-      </div>
+        </div>
       </div>
 
       
