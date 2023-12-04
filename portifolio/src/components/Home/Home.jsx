@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '../Navbar/Navbar';
 import me from '../../assets/me.png';
 import lovely from '../../assets/lovely.png';
@@ -12,6 +12,31 @@ import Footer from '../Footer/Footer';
 const Home = () => {
   const [imageSrc, setImageSrc] = useState(me);
   const [lovelyImageSrc, setLovelyImageSrc] = useState(lovely);
+  const [typedName, setTypedName] = useState('');
+  const name = 'Ana Santos';
+
+  useEffect(() => {
+    let currentIndex = 0;
+    let timeout;
+
+    const type = () => {
+      setTypedName((prev) => {
+        if (currentIndex <= name.length) {
+          currentIndex++;
+          return name.substring(0, currentIndex);
+        } else {
+          currentIndex = 0;
+          return '';
+        }
+      });
+
+      timeout = setTimeout(type, 250);
+    };
+
+    type();
+
+    return () => clearTimeout(timeout);
+  }, []);
 
   const handleMouseOverMe = () => {
     setImageSrc(me2);
@@ -47,7 +72,7 @@ const Home = () => {
 
         <div className='profileContent'>
           <p>
-            Olá! Sou <span> Ana Santos</span>.
+            Olá! Sou <span>{typedName}</span>.
           </p>
           <p>
             Esse é meu{' '}
