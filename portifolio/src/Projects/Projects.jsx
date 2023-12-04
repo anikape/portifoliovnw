@@ -4,7 +4,7 @@ import project from '../assets/project.png'
 import Card from '../components/Cards/Cards'
 import cardsList from '../util/cardsList'
 import robot from '../assets/robot.png'
-import virtual from  '../assets/vitual.png'
+import virtual from  '../assets/virtual.png'
 import './project.css'
 import Footer from '../components/Footer/Footer'
 
