@@ -114,3 +114,46 @@ form input::placeholder{
   font-family: 'Chelsea Market', cursive;
   font-size: 30px;
 }
+
+@media screen and (max-width:480px){
+
+  .contactContainer{
+    height: 120vh;
+  }
+
+  .formContainer {
+    width: 90%; 
+    height: auto; 
+    margin: 5rem auto;
+    border-radius: 40px; 
+  }
+
+  .phone img{
+    margin-top: 6rem;
+    width: 150px;
+  }
+
+  form label {
+    font-size: 20px; /* Reduzindo o tamanho da fonte dos rótulos */
+  }
+
+  form input,
+  #message {
+    width: 90%; /* Redimensionando os campos de entrada para 90% da largura */
+    padding: 0.8rem; /* Ajustando o preenchimento interno */
+    font-size: 16px; /* Ajustando o tamanho da fonte dos campos */
+  }
+
+  .submit {
+    width: 70%; /* Redimensionando o botão de envio para 70% da largura */
+    font-size: 20px; /* Ajustando o tamanho da fonte do botão de envio */
+    margin-top: 10px; /* Diminuindo a margem superior do botão */
+  }
+
+  #my-form-status {
+    font-size: 20px; /* Ajustando o tamanho da fonte da mensagem de status */
+    padding-top: 1.5rem; /* Ajustando o espaçamento superior da mensagem */
+  }
+  
+
+}
