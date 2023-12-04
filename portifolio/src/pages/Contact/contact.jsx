@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
-import headphoneEmoji from './public/images/emoji-headphone.png'; // Certifique-se de que o caminho para a imagem está correto
+import phone from '../../assets/phone.png'; // Certifique-se de que o caminho para a imagem está correto
+import Navbar from '../../components/Navbar/Navbar';
+import './contact.css'
+import Footer from '../../components/Footer/Footer';
 
-const FormContainer = () => {
+const Contact = () => {
   const [statusMessage, setStatusMessage] = useState('');
 
   const handleSubmit = async (event) => {
@@ -35,9 +38,11 @@ const FormContainer = () => {
   };
 
   return (
+    <section className='contactContainer'>
+    <Navbar />
     <section className="formContainer">
       <figure className="phone">
-        <img src={headphoneEmoji} alt="Emoji de fone de ouvido" />
+        <img src={phone} alt="Emoji de fone de ouvido" />
       </figure>
 
       <form
@@ -64,7 +69,10 @@ const FormContainer = () => {
         <p id="my-form-status">{statusMessage}</p>
       </form>
     </section>
+
+    <Footer />
+  </section>
   );
 };
 
-export default FormContainer;
+export default Contact;
