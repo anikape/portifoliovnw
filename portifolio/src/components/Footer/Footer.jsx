@@ -16,8 +16,8 @@ const Footer = () => {
         <nav className="footerNavigation">
           <ul id='footerList'>
             <li><a className="navLink" href="/">Home</a></li>
-            <li><a className="navLink" href="/projects">Projects</a></li>
-            <li><a className="navLink" href="/contact">Contact</a></li>
+            <li><a className="navLink" href="/Projects">Projects</a></li>
+            <li><a className="navLink" href="/Contact">Contact</a></li>
             <li>
               <a className="navLink" href="https://www.linkedin.com/in/ana-saantos/" target="_blank" rel="noopener noreferrer">
                 <FaLinkedin /> Linkedin
