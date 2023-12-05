@@ -1,61 +1,57 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logoHeader from '../../assets/logoHeader.svg'
-import linkedin from '../../assets/linkedin.svg'
-import git from '../../assets/git.svg'
-import './navbar.css'
+import { Navbar as BootstrapNavbar, Nav, NavDropdown } from 'react-bootstrap';
+import logoHeader from '../../assets/logoHeader.svg';
+import linkedin from '../../assets/linkedin.svg';
+import git from '../../assets/git.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './navbar.css';
 
 const Navbar = () => {
+  const [expanded, setExpanded] = useState(false);
+
+  const handleToggle = () => setExpanded(!expanded);
+  const handleClose = () => setExpanded(false);
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div className="container">
-      <Link className="navbar-brand" to="/">
-      <img src={logoHeader} alt="Github" width="47" height="47" />
-      </Link>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon" />
-      </button>
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav ms-auto">
-          <li className="nav-item">
+    <BootstrapNavbar
+      expanded={expanded}
+      expand="lg"
+      className="navbar navbar-dark bg-dark"
+    >
+      <div className="container">
+        <Link className="navbar-brand" to="/">
+          <img src={logoHeader} alt="Github" width="47" height="47" />
+        </Link>
+        <BootstrapNavbar.Toggle
+          aria-controls="navbarNav"
+          onClick={handleToggle}
+        />
+        <BootstrapNavbar.Collapse id="navbarNav">
+          <Nav className="ms-auto" onClick={handleClose}>
             <Link className="nav-link" to="/">
               Home
             </Link>
-          </li>
-          <li className="nav-item">
             <Link className="nav-link" to="/projects">
               Projetos
             </Link>
-          </li>
-          <li className="nav-item">
             <Link className="nav-link" to="/contato">
               Contato
             </Link>
-          </li>
-          <li className="nav-item">
-              <Link className="nav-link" to="/contato">
+            <NavDropdown title="Redes Sociais" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/linkedin">
                 <img src={linkedin} alt="Linkedin" width="20" height="20" />
                 Linkedin
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/contato">
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/github">
                 <img src={git} alt="Github" width="20" height="20" />
-               Github
-              </Link>
-            </li>
-        </ul>
+                Github
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </BootstrapNavbar.Collapse>
       </div>
-    </div>
-  </nav>
+    </BootstrapNavbar>
   );
 };
 
